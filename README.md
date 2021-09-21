@@ -1,3 +1,3 @@
 ```
-	React, redux, styled-components, firebase
+	React, redux, styled-components, firebase, react-slick
 ```

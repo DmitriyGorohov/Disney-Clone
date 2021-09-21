@@ -31,7 +31,7 @@ function Header() {
 					<span>SERIES</span>
 				</a>
 			</NavMenu>
-			<UserImg src='https://sun9-76.userapi.com/impf/p7s5nXIOTtCRstlMlzZrS3oZj_LE7pWB-ywdiA/rA2IIrAqvdY.jpg?size=2000x1335&quality=96&sign=ad7dccf816f97173c3b4f84276e1dfc1&type=album' />
+			<UserImg src='https://sun9-71.userapi.com/impf/c857624/v857624267/5e243/cT7eUC9_7FQ.jpg?size=1080x1080&quality=96&sign=62b4d2a4a13afc22f42c37a19ca4c0ff&type=album' />
 
 		</Nav>
 	)
@@ -46,6 +46,7 @@ const Nav = styled.nav`
 	display: flex;
 	align-items: center;
 	padding: 0 36px;
+	overflow-x: hidden;
 `
 const Logo = styled.img`
 	width: 80px;
