@@ -1,35 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
+import { selectMovies } from '../features/movie/movieSlice'
+import { useSelector } from 'react-redux'
 
 function Movies() {
+	const movies = useSelector(selectMovies)
+
+	console.log(movies);
+
 	return (
 		<Container>
 			<h4>Recommended for You</h4>
 			<Content>
-				<Wrap>
-					<img
-						src='https://lumiere-a.akamaihd.net/v1/images/p_wandavision_disneyplus_poster03_20118_66028c77.jpeg?region=0,0,540,810&width=480'
-						alt='Shan-chi'
-					/>
-				</Wrap>
-				<Wrap>
-					<img
-						src='https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg'
-						alt='Shan-chi'
-					/>
-				</Wrap>
-				<Wrap>
-					<img
-						src='https://lumiere-a.akamaihd.net/v1/images/p_starwarstheriseofskywalker_19732_b0052d5f.jpeg'
-						alt='Shan-chi'
-					/>
-				</Wrap>
-				<Wrap>
-					<img
-						src='https://lumiere-a.akamaihd.net/v1/images/p_onward_19732_09862641.jpeg'
-						alt='Shan-chi'
-					/>
-				</Wrap>
+				{movies && movies.map((movie, index) => (
+					<Wrap key={movie.id}>
+						<img
+							src={movie.cardImg}
+							alt={movie.title}
+						/>
+					</Wrap>
+				))}
 			</Content>
 		</Container>
 	)

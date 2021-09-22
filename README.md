@@ -7,4 +7,5 @@
 Приложение на этапе разработки
 
 ![screen1.png](screen1.png)
+![screen3.png](screen3.png)
 ![screen2.png](screen2.png)

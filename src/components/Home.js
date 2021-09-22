@@ -1,11 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+// import db from '../database'
+import axios from 'axios'
 import styled from 'styled-components'
 import ImgSlider from './ImgSlider'
 import Movies from './Movies'
 import Viewers from './Viewers'
-
+import { useDispatch } from 'react-redux'
+import { setMovies } from '../features/movie/movieSlice'
 
 function Home() {
+	const dispatch = useDispatch()
+
+
+	useEffect(() => {
+		axios
+			.get('https://613f5090e9d92a0017e175f8.mockapi.io/movies')
+			.then((resp) => {
+				let tempMovies = resp.data.map((item) => {
+					return {
+						id: Date.now(),
+						...item,
+					}
+				})
+				dispatch(setMovies(tempMovies))
+
+			})
+			.catch((error) => {
+				console.log(error)
+			})
+	}, [])
+
 	return (
 		<Container>
 			<ImgSlider />
