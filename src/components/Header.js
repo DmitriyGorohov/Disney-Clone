@@ -6,27 +6,27 @@ function Header() {
 		<Nav>
 			<Logo src='/images/logo.svg' />
 			<NavMenu>
-				<a href='/'>
+				<a>
 					<img src="/images/home-icon.svg" alt="Home-icon" />
 					<span>HOME</span>
 				</a>
-				<a href='/'>
+				<a>
 					<img src="/images/search-icon.svg" alt="Home-icon" />
 					<span>SEARCH</span>
 				</a>
-				<a href='/'>
+				<a>
 					<img src="/images/watchlist-icon.svg" alt="Home-icon" />
 					<span>WATCHLIST</span>
 				</a>
-				<a href='/'>
+				<a>
 					<img src="/images/original-icon.svg" alt="Home-icon" />
 					<span>ORIGINAL</span>
 				</a>
-				<a href='/'>
+				<a>
 					<img src="/images/movie-icon.svg" alt="Home-icon" />
 					<span>MOVIES</span>
 				</a>
-				<a href='/'>
+				<a>
 					<img src="/images/series-icon.svg" alt="Home-icon" />
 					<span>SERIES</span>
 				</a>
