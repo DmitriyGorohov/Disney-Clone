@@ -4,8 +4,7 @@
 
 ---
 
-Приложение на этапе разработки
-
-![screen1.png](screen1.png)
+![screen6.png](screen6.png)
+![screen5.png](screen5.png)
+![screen4.png](screen4.png)
 ![screen3.png](screen3.png)
-![screen2.png](screen2.png)

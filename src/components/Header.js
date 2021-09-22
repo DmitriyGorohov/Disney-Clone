@@ -17,12 +17,14 @@ function Header() {
 
 	return (
 		<Nav>
-			<Link to='/'>
+			<Link to='/login'>
 				<Logo src='/images/logo.svg' />
 			</Link>
 			{!userName ? (
 				<LoginContainer>
-					<Login onClick={signIn}>Login</Login>
+					<Login onClick={signIn}>
+						Login
+					</Login>
 				</LoginContainer>
 			) : (
 				<>
@@ -52,7 +54,10 @@ function Header() {
 							<span>SERIES</span>
 						</a>
 					</NavMenu>
-					<UserImg onClick={finishedUser} src='https://sun9-71.userapi.com/impf/c857624/v857624267/5e243/cT7eUC9_7FQ.jpg?size=1080x1080&quality=96&sign=62b4d2a4a13afc22f42c37a19ca4c0ff&type=album' />
+					<UserImg
+						onClick={finishedUser}
+						src='https://sun9-71.userapi.com/impf/c857624/v857624267/5e243/cT7eUC9_7FQ.jpg?size=1080x1080&quality=96&sign=62b4d2a4a13afc22f42c37a19ca4c0ff&type=album'
+					/>
 				</>
 			)}
 		</Nav>
@@ -68,6 +73,10 @@ const Nav = styled.nav`
 	align-items: center;
 	padding: 0 36px;
 	overflow-x: hidden;
+	@media (max-width: 768px) {
+		display: flex;
+		justify-content: space-between;
+	}
 `
 const Logo = styled.img`
 	width: 80px;
@@ -77,6 +86,11 @@ const NavMenu = styled.div`
 	flex: 1;
 	margin-left: 25px;
 	align-items: center;
+
+	@media (max-width: 768px) {
+		display: none;
+	}
+
 	a {
 		display: flex;
 		align-items: center;
@@ -126,7 +140,7 @@ const Login = styled.div`
 	border-radius: 4px;
 	letter-space: 1.5px;
 	text-transform: uppercase;
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0, 0, 0, 0.6);
 	cursor: pointer;
 	transition: all 0.25s ease-in-out 0s;
 
@@ -137,8 +151,7 @@ const Login = styled.div`
 	}
 `
 const LoginContainer = styled.div`
-	flex: 1;	
+	flex: 1;
 	display: flex;
 	justify-content: flex-end;
-	
 `

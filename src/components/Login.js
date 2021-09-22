@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 function Login() {
@@ -6,7 +7,11 @@ function Login() {
 		<Container>
 			<CTA>
 				<CTALoginOne src='/images/cta-logo-one.svg' />
-				<SignUp>GET ALL THERE</SignUp>
+				<SignUp>
+					<Link style={{ textDecoration: 'none', color: 'white' }} to='/'>
+						GET ALL THERE
+					</Link>
+				</SignUp>
 				<Description>
 					Disney+ Day Content Premieres from Disney, Pixar, Marvel, Star Wars, and National
 					Geographic
