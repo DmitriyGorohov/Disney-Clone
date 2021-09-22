@@ -14,7 +14,7 @@ function App() {
 				<Route path='/login'>
 					<Login />
 				</Route>
-				<Route path='/detail'>
+				<Route path='/detail/:id'>
 					<Detail />
 				</Route>
 				<Route path='/'>

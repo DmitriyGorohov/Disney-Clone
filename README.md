@@ -1,5 +1,5 @@
 ```
-	React, redux, styled-components, firebase, react-slick, React-router-dom
+	React, redux, styled-components, firebase, react-slick, React-router-dom, responsive css
 ```
 
 ---

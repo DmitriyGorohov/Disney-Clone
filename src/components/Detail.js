@@ -1,46 +1,49 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import axios from 'axios'
 import styled from 'styled-components'
+import { useParams } from 'react-router-dom'
 
 function Detail() {
+	const [movie, setMovie] = React.useState([])
+	const { id } = useParams()
+
+	useEffect(() => {
+		axios.get(`https://613f5090e9d92a0017e175f8.mockapi.io/movies`).then((response) => {
+			const respData = response.data
+			setMovie(respData.filter((data) => data.id == id)[0])
+		})
+	}, [])
+
 	return (
 		<Container>
-			<Background>
-				<img
-					src='https://lumiere-a.akamaihd.net/v1/images/h_avengersendgame_19751_b8067b68.jpeg?region=0,0,2048,878'
-					alt='Background__image'
-				/>
-			</Background>
-			<ImageTitle>
-				<img
-					src='https://lumiere-a.akamaihd.net/v1/images/l_avengersendgame_19751_779bf2a1.png?region=0,0,400,170'
-					alt=''
-				/>
-			</ImageTitle>
-			<Controls>
-				<PlayButton>
-					<img src='/images/play-icon-black.png' alt='Play' />
-					<span>PLAY</span>
-				</PlayButton>
-				<TrailerButton>
-					<img src='/images/play-icon-white.png' alt='Trailer' />
-					<span>TRAILER</span>
-				</TrailerButton>
-				<AddButton>
-					<span>+</span>
-				</AddButton>
-				<GroupWatchButton>
-					<img src='/images/group-icon.png' alt='Group' />
-				</GroupWatchButton>
-			</Controls>
-			<SubTitle>PG-13 3h 1min April 26, 2019 Action, Adventure, Science Fiction</SubTitle>
-			<Description>
-				The grave course of events set in motion by Thanos that wiped out half the universe and
-				fractured the Avengers ranks compels the remaining Avengers to take one final stand in
-				Marvel Studios’ grand conclusion to twenty-two films, “Avengers: Endgame.” Kevin Feige
-				produces “Avengers: Endgame,” and Anthony and Joe Russo are the directors. Louis D’Esposito,
-				Victoria Alonso, Michael Grillo, Trinh Tran, Jon Favreau and Stan Lee are the executive
-				producers, and Christopher Markus & Stephen McFeely wrote the screenplay.
-			</Description>
+			{movie && (
+				<>
+					<Background>
+						<img src={movie.backgroundImg} alt='Background__image' />
+					</Background>
+					<ImageTitle>
+						<img src={movie.titleImg} alt='' />
+					</ImageTitle>
+					<Controls>
+						<PlayButton>
+							<img src='/images/play-icon-black.png' alt='Play' />
+							<span>PLAY</span>
+						</PlayButton>
+						<TrailerButton>
+							<img src='/images/play-icon-white.png' alt='Trailer' />
+							<span>TRAILER</span>
+						</TrailerButton>
+						<AddButton>
+							<span>+</span>
+						</AddButton>
+						<GroupWatchButton>
+							<img src='/images/group-icon.png' alt='Group' />
+						</GroupWatchButton>
+					</Controls>
+					<SubTitle>{movie.subTitle}</SubTitle>
+					<Description>{movie.description}</Description>
+				</>
+			)}
 		</Container>
 	)
 }
@@ -134,7 +137,7 @@ const GroupWatchButton = styled(AddButton)`
 	background: rgb(0, 0, 0);
 `
 const SubTitle = styled.div`
-	color: rgb(249,249,249);
+	color: rgb(249, 249, 249);
 	font-size: 15px;
 	min-height: 20px;
 	margin-top: 26px;
@@ -143,8 +146,6 @@ const Description = styled.div`
 	line-height: 1.4;
 	font-size: 20px;
 	margin-top: 16px;
-	max-width: 760px; 
-	color: rgb(249,249,249);
-
-
+	max-width: 760px;
+	color: rgb(249, 249, 249);
 `
