@@ -22,9 +22,7 @@ function Header() {
 			</Link>
 			{!userName ? (
 				<LoginContainer>
-					<Login onClick={signIn}>
-						Login
-					</Login>
+					<Login onClick={signIn}>Login</Login>
 				</LoginContainer>
 			) : (
 				<>

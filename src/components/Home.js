@@ -24,7 +24,7 @@ function Home() {
 			.catch((error) => {
 				console.log(error)
 			})
-	}, [])
+	}, [dispatch])
 
 	return (
 		<Container>

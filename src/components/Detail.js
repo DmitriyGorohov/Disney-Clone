@@ -12,7 +12,7 @@ function Detail() {
 			const respData = response.data
 			setMovie(respData.filter((data) => data.id == id)[0])
 		})
-	}, [])
+	}, [id])
 
 	return (
 		<Container>
