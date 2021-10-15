@@ -7,31 +7,31 @@ function Viewers() {
 			<Wrap>
 				<img src='/images/viewers-disney.png' alt='Disney' />
 				<video autoPlay={true} loop={true} playsInline={true}>
-					<source src="/videos/disney.mp4" type="video/mp4" />
+					<source src='/videos/disney.mp4' type='video/mp4' />
 				</video>
 			</Wrap>
 			<Wrap>
 				<img src='/images/viewers-pixar.png' alt='Pixar' />
 				<video autoPlay={true} loop={true} playsInline={true}>
-					<source src="/videos/pixar.mp4" type="video/mp4" />
+					<source src='/videos/pixar.mp4' type='video/mp4' />
 				</video>
 			</Wrap>
 			<Wrap>
 				<img src='/images/viewers-marvel.png' alt='Marvel' />
 				<video autoPlay={true} loop={true} playsInline={true}>
-					<source src="/videos/marvel.mp4" type="video/mp4" />
+					<source src='/videos/marvel.mp4' type='video/mp4' />
 				</video>
 			</Wrap>
 			<Wrap>
 				<img src='/images/viewers-starwars.png' alt='Star Wars' />
 				<video autoPlay={true} loop={true} playsInline={true}>
-					<source src="/videos/star-wars.mp4" type="video/mp4" />
+					<source src='/videos/star-wars.mp4' type='video/mp4' />
 				</video>
 			</Wrap>
 			<Wrap>
 				<img src='/images/viewers-national.png' alt='National' />
 				<video autoPlay={true} loop={true} playsInline={true}>
-					<source src="/videos/national.mp4" type="video/mp4" />
+					<source src='/videos/national.mp4' type='video/mp4' />
 				</video>
 			</Wrap>
 		</Container>
